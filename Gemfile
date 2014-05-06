@@ -37,14 +37,12 @@ group :doc do
 end
 
 group :development, :test  do
-
 	# Pour le debugging
 	gem 'pry'
 
 	# For testing
 	gem 'rspec-rails'
 
-	
 	gem 'factory_girl_rails'
 end
 
