@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-# Pour le debugging
-gem 'pry'
 
 # Display DB tables nicely
 gem 'hirb'
@@ -38,6 +36,21 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test  do
+
+	# Pour le debugging
+	gem 'pry'
+
+	# For testing
+	gem 'rspec-rails'
+
+	
+	gem 'factory_girl_rails'
+end
+
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,3 +62,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+
