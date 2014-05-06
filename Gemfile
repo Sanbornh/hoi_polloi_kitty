@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# Pour le debugging
+gem 'pry'
+
+# Display DB tables nicely
+gem 'hirb'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
