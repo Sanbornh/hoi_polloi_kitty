@@ -1,2 +1,32 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Create a New Project</h1>
+
+<%= form_for(@project) do |f| %>
+  <div class="field">
+    <p><%= f.label :name %></p>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :goal %></p>
+    <%= f.number_field :goal %>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :funding_start %></p>
+    <%= f.date_field :funding_start %>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :funding_end %></p>
+    <%= f.date_field :funding_end %>
+  </div>
+
+  <div class="field">
+    <p><%= f.label :description %></p>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
