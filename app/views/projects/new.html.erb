@@ -26,6 +26,15 @@
     <%= f.text_area :description %>
   </div>
 
+  <div id="tasks">
+    <p><%= f.fields_for :break_points do |bp| %></p>
+          <%= render 'break_point_fields', :f => bp %>
+          <div class="links">
+            <%= link_to_add_association 'Add Break Point', f, :break_points %>
+          </div>
+      <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

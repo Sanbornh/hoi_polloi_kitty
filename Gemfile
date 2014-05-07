@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'cocoon'
 
 # Display DB tables nicely
 gem 'hirb'
