@@ -12,24 +12,23 @@ describe Project do
   	project.should_not be_valid
   end
 
-  it "should validate presence of description"  do
-  	project.description = nil
-  	project.should_not be_valid
+  it "should validate presence of description" do
+    project.description = nil
+    project.should_not be_valid
+  end
+
+  it "should validate presence of goal" do
+    project.goal = nil
+    project.should_not be_valid
   end
   
-  it "should validate presence of goal" do
-  	project.goal = nil
-  	project.should_not be_valid
+  it "should validate presence of a funding start date" do
+    project.funding_start = nil
+    project.should_not be_valid
   end
 
-  it "should validate presence of funding_end" do
-  	project.funding_end = nil
-  	project.should_not be_valid
+  it "should validate presence of a funding end date" do
+    project.funding_end = nil
+    project.should_not be_valid
   end
-
-  it "should validate presence of funding_start" do
-  	project.funding_start = nil
-  	project.should_not be_valid
-  end
-
 end

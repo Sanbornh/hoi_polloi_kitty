@@ -1,0 +1,14 @@
+<h1>Hoi Polloi Kitty</h1>
+
+<h3>All Projects</h3>
+
+<%= link_to "Add New Project", "/projects/new" %>
+
+<p>Below this text should be a project or two:</p>
+<hr>
+<% @projects.each do |project| %>
+  <p>Product Name: <%= link_to project[:name], "/projects/#{project.id}" %></p>
+  <p>Description: <%= project[:description] %></p>
+  <p>$<%= project.goal %></p>
+  <hr>
+<% end %>
