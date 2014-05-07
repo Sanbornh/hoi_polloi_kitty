@@ -1,5 +1,6 @@
 HoiPolloiKitty::Application.routes.draw do
 
+  resources :break_points
   resources :projects
 
   root :to => 'projects#index'
