@@ -26,7 +26,9 @@
     <%= f.text_area :description %>
   </div>
 
-  <div id="tasks">
+  <div id="break-points">
+    <hr>
+    <h3>Add Pledges</h3>
     <p><%= f.fields_for :break_points do |bp| %></p>
           <%= render 'break_point_fields', :f => bp %>
           <div class="links">
