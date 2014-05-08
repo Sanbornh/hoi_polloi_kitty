@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to projects_url
     else
+      # binding.pry
       render :new
     end
   end
