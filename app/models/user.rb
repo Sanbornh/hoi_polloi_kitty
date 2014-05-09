@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
-  has_secure_password
+  authenticates_with_sorcery!
 
-  validates :password, presence: true, on: :create
-  validates :name, presence: true
+  validates :name, :email, presence: true, on: :create
+  validates :password, confirmation: true
+  validates :password_confirmation, presence: true
+ 
+  validates_uniqueness_of :email
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508192749) do
+ActiveRecord::Schema.define(version: 20140509185634) do
 
   create_table "break_points", force: true do |t|
     t.integer  "value"
@@ -34,9 +34,12 @@ ActiveRecord::Schema.define(version: 20140508192749) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "crypted_password"
+    t.string   "salt"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+
+  before_filter :require_login, except: [:index, :show]
   
   def index
     @projects = Project.all
@@ -13,19 +15,18 @@ class ProjectsController < ApplicationController
     @project.break_points.build
   end
 
-  def edit
-    @project = Project.find(params[:id])
-  end
-
   def create
     @project = Project.new(projects_params)
 
     if @project.save
       redirect_to projects_url
     else
-      # binding.pry
       render :new
     end
+  end
+
+  def edit
+    @project = Project.find(params[:id])
   end
 
   def update
