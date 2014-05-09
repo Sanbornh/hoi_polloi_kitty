@@ -1,5 +1,9 @@
 HoiPolloiKitty::Application.routes.draw do
 
+  resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  resources :break_points
   resources :projects
 
   root :to => 'projects#index'

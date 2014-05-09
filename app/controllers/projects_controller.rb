@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.break_points.build
   end
 
   def edit
@@ -22,6 +23,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to projects_url
     else
+      # binding.pry
       render :new
     end
   end
@@ -45,6 +47,6 @@ class ProjectsController < ApplicationController
   private
 
   def projects_params
-    params.require(:project).permit(:name, :description, :goal, :funding_start, :funding_end)
+    params.require(:project).permit(:name, :description, :goal, :funding_start, :funding_end, break_points_attributes: [:id, :description, :value, :_destroy])
   end
 end
