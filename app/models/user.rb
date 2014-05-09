@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	has_many :pledges
+	has_many :projects
+	
   authenticates_with_sorcery!
 
   validates :name, :email, presence: true, on: :create
