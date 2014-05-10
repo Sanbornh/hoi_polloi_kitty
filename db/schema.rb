@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509211749) do
+ActiveRecord::Schema.define(version: 20140510224735) do
 
   create_table "break_points", force: true do |t|
     t.integer  "value"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140509211749) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "project_id"
+    t.integer  "breakpoint_id"
   end
 
   create_table "projects", force: true do |t|
