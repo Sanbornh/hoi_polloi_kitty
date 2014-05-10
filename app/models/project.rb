@@ -10,4 +10,10 @@ class Project < ActiveRecord::Base
 	def init
 		self.amount_raised = 0
 	end
+
+  def make_pledge
+    
+  end
+
+
 end
