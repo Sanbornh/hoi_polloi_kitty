@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
 
   belongs_to :user #the user who creates the project
 	has_many :break_points 
-	has_many :users, through :pledges  #users who pledge various amounts to the project
+	has_many :users, through: :pledges  #users who pledge various amounts to the project
 
   accepts_nested_attributes_for :break_points, :reject_if => :all_blank, :allow_destroy => true
 	validates_presence_of :name, :description, :goal, :funding_start, :funding_end

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
-	has_many :projects, through :pledges #various projects where this user has pledged
 	has_many :projects #various projects that have been created by this user
+  has_many :projects, through: :pledges #various projects where this user has pledged
 	
   authenticates_with_sorcery!
 
